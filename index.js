@@ -16,7 +16,7 @@ const targetGuilds = [];
 const client = http2.connect(CONFIG.host);
 
 const updateMfa = () => {
-    try { mfaToken = fs.readFileSync("mfa.txt", "utf8").trim(); } catch {}
+    try { mfaToken = fs.readFileSync("mfa1.txt", "utf8").trim(); } catch {}
 };
 updateMfa();
 fs.watch("mfa.txt", (e) => e === "change" && updateMfa());
